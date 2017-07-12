@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-<title>theBill
-  <br>
-  Review</title>
+<title>TheBillReview</title>
 </head>
-<body>
-<h1 style="text-align:center;font-size:80px;">
-TheBill
-<br>
-Review</h1>
 
-<h2 style="text-align:left;font-size:30px;
-  margin-top:0px;margin-bottom:0px;
-  font-weight:bold;">
-  Upcoming Bills </h2>
 
   <style>
-   .button {
+  .button {
     display: inline-block;
     border-radius: 4px;
     background-color: #f4511e;
@@ -30,6 +19,7 @@ Review</h1>
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+    float:right;
   }
 
   .button span {
@@ -38,7 +28,6 @@ Review</h1>
     position: relative;
     transition: 0.5s;
   }
-
 
   .button span:after {
     content: '\00bb';
@@ -52,12 +41,27 @@ Review</h1>
   .button:hover span {
     padding-right: 25px;
   }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
   </style>
-  </head>
   <body>
-<button class="button" style="vertical-align:middle"
-   onclick="javascript:document.location='/Users/Girls%20Who%20Code/
-   thebillreview/contactrep.html'"><span>contact rep </span></button>
+    <h1 style="text-align:center;font-size:80px;">
+    TheBill
+    <br>
+    Review</h1>
+
+  <button class="button" style="vertical-align:middle"
+  onclick="javascript:document.location='file:///C:/Users/Girls%20Who%20Code/thebillreview/contactrep.html'"><span>contact rep </span></button>
+
+  <h2 style="text-align:left;font-size:30px;
+    margin-top:0px;margin-bottom:0px;
+    font-weight:bold;">
+    Upcoming Bills </h2>
+
+
 
   </body>
   </html>
