@@ -1,4 +1,10 @@
-
-$.get( "https://www.govtrack.us/api/v2/bill?congress=112&order_by=-current_status_date", function(data){
-  console.log(data)
+$(function(){
+  $.ajax({
+           url: "https://api.propublica.org/congress/v1/115/house/bills/introduced.json",
+           type: "GET",
+           dataType: 'json',
+           headers: {'X-API-Key':"UEiZ3kAMRJ2dnxFyTnP0l7GwFm8hitrL4V6Kmn5M" }
+         }).done(function(data){
+         console.log(data)
+         });
 })
