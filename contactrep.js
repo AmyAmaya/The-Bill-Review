@@ -1,5 +1,5 @@
 
- var mykey= config.MY_KEY;
+ var mykey= configs.KEY_1;
  //var use
 //var useraddress="user_input"
 
