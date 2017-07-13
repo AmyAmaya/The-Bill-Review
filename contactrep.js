@@ -1,13 +1,14 @@
-var mykey= config.MY_KEY;
+
+ var mykey= config.MY_KEY;
+ //var use
+//var useraddress="user_input"
 
 
-
-  $.ajax({
-           url: " https://www.googleapis.com/civicinfo/v2/representatives",
-           type: "GET",
-           dataType: 'json',
-           headers: {'X-API-Key':"UEiZ3kAMRJ2dnxFyTnP0l7GwFm8hitrL4V6Kmn5M" }
-         }).done(function(data){
-         console.log(data)
-         });
+$(function(){
+  $('#search').click(function(e){
+    e.preventDefault()
+    $.get('https://www.googleapis.com/civicinfo/v2/representatives?key='+mykey+'&address=1263%20Pacific%20Ave.%20Kansas%20City%20KS', function(data){
+            console.log(data)
+           });
+  })
 })

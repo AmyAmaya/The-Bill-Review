@@ -1,296 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <!-- <script type ="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type+"text/javascript" src="config.js"></script>
+    <script type= "text/javascript" src="contactrep.js"></script>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Contact Representative</title>
     <script type='text/javascript'src='config.js'></script>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #description {
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-      }
 
-      #infowindow-content .title {
-        font-weight: bold;
-      }
-
-      #infowindow-content {
-        display: none;
-      }
-
-      #map #infowindow-content {
-        display: inline;
-      }
-
-      .pac-card {
-        margin: 10px 10px 0 0;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        background-color: #fff;
-        font-family: Roboto;
-      }
-
-      #pac-container {
-        padding-bottom: 12px;
-        margin-right: 12px;
-      }
-
-      .pac-controls {
-        display: inline-block;
-        padding: 5px 11px;
-      }
-
-      .pac-controls label {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-      }
-
-      #pac-input {
-        background-color: #fff;
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-        margin-left: 12px;
-        padding: 0 11px 0 13px;
-        text-overflow: ellipsis;
-        width: 400px;
-      }
-
-      #pac-input:focus {
-        border-color: #4d90fe;
-      }
-
-      #title {
-        color: #fff;
-        background-color: #4d90fe;
-        font-size: 25px;
-        font-weight: 500;
-        padding: 6px 12px;
-      }
-      #target {
-        width: 345px;
-      }
-    </style>
   </head>
+
+<style>
+.button{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color:#FFFFFF;
+  text-align:center;
+  font-size:28px;
+  padding:20px;
+  width:200px;
+  transition:all 05s;
+  cursor:pointer;
+  margin:5px;
+  float:right;
+}
+.button span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after{
+  content:'\00bb';
+  position:absolute;
+  opacity: 0;
+  top:0;
+  right: -20px
+}
 <body>
-  <h1> Find the contact information for your representative here! </h1>
-  <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-  <div id="map"></div>
-  <script>
-    // This example adds a search box to a map, using the Google Place Autocomplete
-    // feature. People can enter geographical searches. The search box will return a
-    // pick list containing a mix of places and predicted search terms.
+  <h1> Contact Your Representative </h1>
+<form>
+ <label >Type your street address</label>
+  <input type="text"name= "address">
+  <button type="Submit" name="button" id="search">Search</button>
+</form>
+  <div id="address">
 
-    // This example requires the Places library. Include the libraries=places
-    // parameter when you first load the API. For example:
-    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+  </div>
+<div id="info">
 
-    function initAutocomplete() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -33.8688, lng: 151.2195},
-        zoom: 13,
-        mapTypeId: 'roadmap'
-      });
-
-      // Create the search box and link it to the UI element.
-      var input = document.getElementById('pac-input');
-      var searchBox = new google.maps.places.SearchBox(input);
-      map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-      // Bias the SearchBox results towards current map's viewport.
-      map.addListener('bounds_changed', function() {
-        searchBox.setBounds(map.getBounds());
-      });
-
-      var markers = [];
-      // Listen for the event fired when the user selects a prediction and retrieve
-      // more details for that place.
-      searchBox.addListener('places_changed', function() {
-        var places = searchBox.getPlaces();
-
-        if (places.length == 0) {
-          return;
-        }
-
-        // Clear out the old markers.
-        markers.forEach(function(marker) {
-          marker.setMap(null);
-        });
-        markers = [];
-
-        // For each place, get the icon, name and location.
-        var bounds = new google.maps.LatLngBounds();
-        places.forEach(function(place) {
-          if (!place.geometry) {
-            console.log("Returned place contains no geometry");
-            return;
-          }
-          var icon = {
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(25, 25)
-          };
-
-          // Create a marker for each place.
-          markers.push(new google.maps.Marker({
-            map: map,
-            icon: icon,
-            title: place.name,
-            position: place.geometry.location
-          }));
-
-          if (place.geometry.viewport) {
-            // Only geocodes have viewport.
-            bounds.union(place.geometry.viewport);
-          } else {
-            bounds.extend(place.geometry.location);
-          }
-        });
-        map.fitBounds(bounds);
-      });
-    }
-
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCMTsEEiE6dcFn6PquKxk4ReHWwBbS4dk&libraries=places&callback=initAutocomplete"
-       async defer></script>
-  <script>
-
-    var map;
-    var kmlUrl;
-    var alreadyZoomed = false;
-    var zip = "30152",
-	districts=["GA11"];
-    var searchAddy = "30152";
-	Stateabbr = districts[0].substring(0, 2);
-	if (Stateabbr == "AQ" || Stateabbr == "DC" || Stateabbr == "GU"
-		|| Stateabbr == "PR" || Stateabbr == "MP"
-		|| Stateabbr == "VI") {
-
-		zip = zip + " " + Stateabbr;
-		searchAddy = searchAddy + " " + Stateabbr;
-        }
-	else {
-		zip = Stateabbr + " " + zip + " USA";
-		searchAddy = searchAddy + " USA";
-	}
-
-    /************************************
-    ** Setting up the KML file for use later
-    **************************************/
-  kmlUrl = "http://wwwd.house.gov/districtmaps/v5/"+districts+".kmz";
-
-
-  var latlng = new Array();
-  try {
-    latlng = [34.002147,-84.63392];
-    } catch(e) {}
-
-    for (i=0;i<districts.length;i++)
-    {
-       // if (districts[i].indexOf("00") != -1)
-       //     districts[i] = districts[i].replace("00","98");
-    }
-	debug=false;
-
-    /*******************************************
-    *** ESRI MAPS CODING
-    *** Starting application and instantiating all
-    *** of the peices needed by ESRI Maps
-    *******************************************/
-      require([
-          "esri/map",
-          "esri/layers/KMLLayer",
-          "esri/dijit/Search",
-          "dojo/parser",
-          "dojo/dom-style",
-          "dojo/on",
-          "dojo/domReady!"
-        ], function(Map, KMLLayer, Search, parser, domStyle, on) {
-
-        map = new Map("map",{
-          basemap: "streets",
-          zoom: 5
-        });
-
-        parser.parse();
-
-    /************************************
-    ** Search function to find Zip/Address entered.
-    ** Sources piece ensures only searching within
-    ** The United States, so as to make sure
-    ** the map stays above the searched area
-    **************************************/
-
-        var search = new Search({
-            enableLabel: false,
-            enableInfoWindow: false,
-            zoomScale: 8,
-            map: map
-        }, "");
-
-        var sources = search.get("sources");
-        sources.push ({
-            countryCode : "US"
-        });
-
-        search.set("sources", sources);
-
-    /************************************
-    ** Performs actual search and re-centers map
-    **************************************/
-
-        search.search(searchAddy);
-    /************************************
-    ** Adding the KML Overlay layer to the app.
-    ** Using the KML url computed earlier
-    **************************************/
-
-        kml = new KMLLayer(kmlUrl);
-        map.addLayer(kml);
-
-        kml.show();
-
-    /************************************
-    ** This function re-zooms the map. After a
-    ** search is completed, the app zooms in too close.
-    ** This function re-adjusts the view.
-    **************************************/
-
-//    map.on("extent-change", function(evt) {
-//        if (!alreadyZoomed) {
-//            map.setZoom(8);
-//            alreadyZoomed = true;
-//        }
-//    });
-
-     on(search,'select-result', function(e) {
-            map.setZoom(8);
-	    map.centerAt(e.result.feature.geometry);
-      });
-
-  });
-
-  </script>
-
+</div>
 </body>
 
 </html>
