@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-<title>theBill
-  <br>
-  Review</title>
-</head>
-<body>
-<h1 style="text-align:center;font-size:80px;">
-TheBill
-<br>
-Review</h1>
-
-<h2 style="text-align:left;font-size:30px;
-  margin-top:0px;margin-bottom:0px;
-  font-weight:bold;">
-  Upcoming Bills </h2>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src= "configs.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <title>TheBillReview</title>
+    <script type= "text/javascript" src="configs.js"></script>
+  </head>
 
   <style>
-   .button {
+  .button {
     display: inline-block;
     border-radius: 4px;
     background-color: #f4511e;
@@ -30,16 +22,14 @@ Review</h1>
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+    float:right;
   }
-
   .button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
-
-
   .button span:after {
     content: '\00bb';
     position: absolute;
@@ -48,16 +38,34 @@ Review</h1>
     right: -20px;
     transition: 0.5s;
   }
-
   .button:hover span {
     padding-right: 25px;
   }
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
   </style>
-  </head>
   <body>
-<button class="button" style="vertical-align:middle"
-   onclick="javascript:document.location='/Users/Girls%20Who%20Code/
-   thebillreview/contactrep.html'"><span>contact rep </span></button>
 
-  </body>
+<p align="center">
+<img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" border="0" src="C:\Users\Girls Who Code\Pictures\Camera Roll\logo.jpg" width="300" height "300">
+
+  <br>
+  <h2 style="text-align:left;font-size:30px;
+    margin-top:0px;margin-bottom:0px;
+    font-weight:bold;">
+    Upcoming Bills </h2>
+    <ul id = "recentbills">
+
+    </ul>
+
+  <button class="button" style="vertical-align:middle"
+  onclick="javascript:document.location='file:///C:/Users/Girls%20Who%20Code/thebillreview/contactrep.html'"><span>contact rep </span></button>
+
+<h2 img src="lightning.jpg" alt="light" style="width:304px;height:228px;">name</h2>
+<h2 id = "name"> </h2>
+<h3> summary </h3>
+<h3 id = "summary" > </h3>
+</body>
   </html>
