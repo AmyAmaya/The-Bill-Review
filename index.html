@@ -8,7 +8,7 @@
   .button {
     display: inline-block;
     border-radius: 4px;
-    background-color: #f4511e;
+    background-color: #adad85;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -48,20 +48,202 @@
   </style>
   <body>
 
+
+
 <p align="center">
 <img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" border="0" src="C:\Users\Girls Who Code\Pictures\Camera Roll\logo.jpg" width="300" height "300">
 
   <br>
-  <h2 style="text-align:left;font-size:30px;
-    margin-top:0px;margin-bottom:0px;
-    font-weight:bold;">
-    Upcoming Bills </h2>
+  <br>
+  <br>
+  <br>
+
+</style>
+     <div id="mySidenav" class="sidenav">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <a href="file:///C:/Users/gldnm/Downloads/The%20Bill%20Review.html">Home</a>
+       <a href="#">Our Mission</a>
+       <a href="#">Bills</a>
+       <a href="#">Contact Your Representative</a>
+     </div>
+
+     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+     <script>
+     function openNav() {
+         document.getElementById("mySidenav").style.width = "250px";
+     }
+     function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+     }
+     </script>
+     <br>
+     <br>
+     <br>
+     <br>
   <button class="button" style="vertical-align:middle"
   onclick="javascript:document.location='file:///C:/Users/Girls%20Who%20Code/thebillreview/contactrep.html'"><span>contact rep </span></button>
-<h2 img src="lightning.jpg" alt="light"style="width:304px;height:228px;">name</h2>
+
+
+  <h1 style="text-align:left;font-size:50px;
+    margin-top:0px;margin-bottom:0px
+    font-weight:bold;">
+    Upcoming Bills </h1>
+
+
+<br>
+<br>
+<br>
+<br>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        }
+     </style>
+  <p><a href="google.com">example:HB134</a></p>
 <h3> summary</h3>
+<br>
+<br>
+<br>
+<br>
+
+<section class="main">
+	 <form class="search" method="post" action="index.html" >
+		 <input type="text" name="q" placeholder="Search..." />
+		 <ul class="results" >
+		 </ul>
+	 </form>
+</section>
 
 
 
-  </body>
+
+<nav class="w3-sidebar w3-bar-block w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">home</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">bill calendar</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">contact representative</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">our mission</a>
+</nav>
+
+</body>
   </html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing:border-box;}
+ul {list-style-type: none;}
+body {font-family: Poynter,sans-serif;}
+
+.month {
+    padding: 50px 25px;
+    width: 100%;
+    background:#5353c6;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+</style>
+</head>
+<body>
+
+<div class="month">
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li style="text-align:center">
+      Week<br>
+      <span style="font-size:16px">some upcoming bills</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="this week">
+  <li><a href="https://www.popvox.com/us/federal/bills/115/s1546">*Patient Protection and Affordable Care Act to provide flexibility </a></li>
+  <li><a href="https://www.popvox.com/us/federal/bills/115/s1533">*Possible ammendment of title XIX of the Social Security Act</li>
+  <li><a href="https://www.popvox.com/us/federal/bills/115/hr3211">*Ammendment in title 18 of U.S. Code</li>
+  <li><a href="https://www.popvox.com/us/federal/bills/115/s1544"> *Bill to prevent Federal funds</li>
+  <li><a href="https://www.popvox.com/us/federal/bills/115/hr3203"> *Review and counter Iranian and Russian governments' agrresion</li>
+  <li><a href="https://www.popvox.com/us/federal/bills/115/hres440">*Consideration of bill H.B.2810 to authorize activities in 2018</li>
+  <li><a href="https://www.popvox.com/us/federal/bills/115/hr3201">* Enhancement of maritime programs</li>
+</ul>
+
+
+
+</body>
+</html>
