@@ -1,4 +1,4 @@
-var mykey= configs.MY_KEY;
+var mykeys= configs.MY_KEY;
 
 
 
@@ -8,7 +8,7 @@ $(function(){
            url: "https://api.propublica.org/congress/v1/115/house/bills/introduced.json",
            type: "GET",
            dataType: 'json',
-           headers: {'X-API-Key':mykey }
+           headers: {'X-API-Key':mykeys }
          }).done(function(data){
            console.log(data)
            var bills = data.results[0].bills
