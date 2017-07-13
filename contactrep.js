@@ -1,8 +1,5 @@
 
- var mykey= configs.KEY_1;
- //var use
-//var useraddress="user_input"
-
+var mykey1= configs.KEY_1;
 
 $(function(){
   $('#search').click(function(e){
