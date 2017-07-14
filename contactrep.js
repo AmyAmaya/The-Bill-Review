@@ -1,6 +1,6 @@
 
 var mykey= configs.KEY_1;
-var getinfo= document.getElementbyId("useraddress");
+var getinfo= document.getElementById("useraddress");
 src = "contactrep.js"
 
 
