@@ -1,12 +1,12 @@
 
 var mykey= configs.KEY_1;
-var useraddress="user_input"
-
+var getinfo= document.getElementById("useraddress");
+src = "contactrep.html"
 
 $(function(){
   $('#search').click(function(e){
     e.preventDefault()
-    $.get('https://www.googleapis.com/civicinfo/v2/representatives?key='+mykey+'&address= document.getElementById("useraddress")', function(data){
+    $.get('https://www.googleapis.com/civicinfo/v2/representatives?key='+mykey+'&address= '+getinfo.val()+'',function(data){
             console.log(data)
             var city = data.officials[4].address[0].city
             var line= data.officials[4].address[0].line1
