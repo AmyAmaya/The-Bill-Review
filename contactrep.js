@@ -1,13 +1,13 @@
 
 var mykey= configs.KEY_1;
-//var getinfo= document.getElementById("useraddress");
-//src = "contactrep.js"
+var getinfo= document.getElementById("useraddress");
+src = "contactrep.js"
 
 
 $(function(){
   $('#search').click(function(e){
     e.preventDefault()
-    $.get('https://www.googleapis.com/civicinfo/v2/representatives?key='+mykey+'&address= 765%20N.Saint Marys%20Lane%20Marietta%20GA',function(data){
+    $.get('https://www.googleapis.com/civicinfo/v2/representatives?key='+mykey+'&address= '+getinfo+'',function(data){
             console.log(data)
             var city = data.officials[4].address[0].city
             var line= data.officials[4].address[0].line1
