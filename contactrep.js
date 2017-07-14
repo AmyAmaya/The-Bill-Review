@@ -1,6 +1,6 @@
 
 var mykey= configs.KEY_1;
-var useraddress="user_input"
+src = "contactrep.js"
 
 
 $(function(){
