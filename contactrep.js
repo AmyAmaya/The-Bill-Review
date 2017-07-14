@@ -2,7 +2,6 @@
 var mykey= configs.KEY_1;
 var getinfo= document.getElementById("useraddress");
 src = "contactrep.html"
-g
 
 $(function(){
   $('#search').click(function(e){
