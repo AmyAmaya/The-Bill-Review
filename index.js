@@ -14,11 +14,10 @@ $(function(){
            var bills = data.results[0].bills
            for(var i = 0; i < 10; i++){
              var name = bills[i].title
-             var summary = bills[i].summary
+             //var summary = bills[i].summary
              var url = bills[i].bill_uri
              var number=bills[i].number
-             document.getElementById("recentbills").innerHTML += "<div><li>Name of Bill: <a href= 'billpage.html?" + number+"' data-id="+number+" >"+ name + "</a></li><li> Summary of Bill: " + summary + "</li></div>"
-
+             document.getElementById("recentbills").innerHTML += "<div><li>Name of Bill: <a href='billpage.html?" + number+"' data-id="+number+" >"+ name +  "</li></div>"
            }
           })
       })
