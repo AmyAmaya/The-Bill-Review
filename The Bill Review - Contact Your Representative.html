@@ -123,33 +123,61 @@ body, html {
           document.getElementById("mySidenav").style.width = "0";
       }
       </script>
-  <h1> Contact Your Representative </h1>
-  <p id = "contactinfo"></p>
-<form>
- <label >Type your street address</label>
-  <input type="text"name= "address" id="useraddress">
-  <button type="Submit" name="button" id="search">Search</button>
-</form>
-  <div id="address">
+      <form name="address" method="POST" action="https://ziplook.house.gov/htbin/findrep?ZIP5" class="validate">
+      	Enter a zip code:<br>
+      	<div class="formField"><input name="ZIP" id="zip5" size="16"  value="" maxlength="5" class="validate[required] is-required"></div>
+          <style>
+      .button {
+          background-color: Blue; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+      }
+      .button2:hover {
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+      </style>
+      <body>
+      <button class="button button2">Find your Local <br>Representative</button>
+      </form>
+                  </div>
+              </div>
+              <div id="contentMain" class="grid_12">
+                  <!--wide column -->
+              </div>
+          </div>
+                        </div>
 
-  </div>
-<div id="info">
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  
+                          <div class="grid_8 omega"><!--placeholder -->
 
-</div>
-<footer class="w3-center w3-blue w3-padding-15 w3-opacity">
-  <a href="#home" class="w3-button w3-red"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-tumblr w3-hover-opacity"></i>
-  </div>
+                          </div>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+      </div>
+
+      <script type="text/javascript" src="/content/static/js/jquery-validation-engine.js"></script>
+      <script type="text/javascript" src="/content/static/js/jquery-validationEngine-en.js"></script>
+
+      <script type="text/javascript">
+      	$(document).ready(function() {
+      	   $(".validate").validationEngine();
+
+      	});
+      </script>
+      <h3>Your Zip Code will Direct you to <a href "https://www.house.gov/">U.S House of Representatives'</a> Website.</h3>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-grey">w3.css</a></p>
 </footer>
 <!--
