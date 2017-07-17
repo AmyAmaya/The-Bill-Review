@@ -1,4 +1,5 @@
 var mykeys= configs.MY_KEY;
+var name;
 
 $(function(){
   var number = window.location.search.replace('?H.RES.','').toLowerCase()
@@ -12,7 +13,7 @@ $(function(){
            }).done(function(data){
              console.log(data);
              var bill = data.results[0];
-             var name = bill.title;
+             name = bill.title;
              var summary = bill.summary;
              var actiondate = bill.latest_major_action_date;
              var action = bill.latest_major_action;
@@ -53,6 +54,18 @@ $(function(){
                 $("#govtrack_url").click(function(){
                   window.open(url, '_blank')
                 })
-          })
+          }).done(
+            $.get('https://content.guardianapis.com/search?q='+ name + '&api-key=cb3d2f14-b8dc-4e51-903b-2e5ab699dd6c',function(data){
+                  console.log(data)
+                  var response = data.response
+                  var articles = response.results;
+                  for(var i = 0; i < 10; i++){
+                    var name = articles[i].webTitle
+                    var url = articles[i].webUrl
+                    document.getElementById("article").innerHTML += "<div><li>Article Name: " + name + "</li><li> Article URL: " + url + "</li></div>"
+                  }
+                 })
+
+          )
         }
     })
