@@ -17,7 +17,7 @@ $(function(){
              var summary = bills[i].summary
              var url = bills[i].bill_uri
              var number=bills[i].number
-             document.getElementById("recentbills").innerHTML += "<div><li>Name of Bill: <a href='file:///C:/Users/Girls%20Who%20Code/TheBillReview/The-Bill-Review/billpage.html?" + number+"' data-id="+number+" >"+ name + "</a></li><li> Summary of Bill: " + summary + "</li></div>"
+             document.getElementById("recentbills").innerHTML += "<div><li>Name of Bill: <a href='billpage.html" + number+"' data-id="+number+" >"+ name + "</a></li><li> Summary of Bill: " + summary + "</li></div>"
 
            }
           })
