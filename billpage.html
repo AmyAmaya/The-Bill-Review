@@ -1,14 +1,135 @@
 <html lang= "en-US">
+<title>The Bill Review</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Century Gothic", sans-serif;}
+body, html {
+    height: 100%;
+    color: #000000;
+    line-height: 1.8;
+}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/United_States_Capitol_-_west_front.jpg');
+    min-height: 100%;
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
 <body>
- <center>
-<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
-    <style>
-      body {
-        background-color:#f2f2f2;
-        font-family: 'Fjalla One', sans-serif;
-        font-size: 28px;
-        }
-     </style>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="black-space:nowrap;">
+   <a href = file:///C:/Users/gldnm/Downloads/The%20Bill%20Review%20Files/The%20Bill%20Review%20-%20Home.html>
+      <style>
+      a:link {
+          text-decoration: none;
+      }
+      a:visited {
+          text-decoration: none;
+      }
+      a:hover {
+          text-decoration: none;
+      }
+      a:active {
+          text-decoration: none;
+      }
+      <img src="logo.jpg" alt="logo" style="width:128px;height:128px;">
+      </style>
+ <h1><a href = file:///C:/Users/gldnm/Downloads/The%20Bill%20Review%20Files/The%20Bill%20Review%20-%20Home.html>The <span class="w3-hide-small">Bill</span> Review</span></a></h1>
+  </div>
+</div>
+<body>
+<style>
+      .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #FFFFFF;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+      }
+      .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #0020C2;
+          display: block;
+          transition: 0.3s;
+      }
+      .sidenav a:hover, .offcanvas a:focus{
+          color: #2554C7;
+      }
+      .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+      }
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">home</a>
+        <a href="calendar.html">bill calendar</a>
+        <a href="ourmission.html">our mission</a>
+        <a href="contactrep.html">contact your representative</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+      <script>
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+      }
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+
+      <section class="main">
+      <style>
+      input[type=text] {
+          width: 130px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+          background-color: white;
+          background-image: url('searchicon.png');
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          padding: 12px 20px 12px 40px;
+          -webkit-transition: width 0.4s ease-in-out;
+          transition: width 0.4s ease-in-out;
+      }
+      input[type=text]:focus {
+          width: 75%;
+      }
+      </style>
   <head>
     <body>
     <style>
@@ -20,7 +141,7 @@
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 28px;
+    font-size: 25px;
     padding: 10px;
     width: 200px;
     transition: all 0.5s;
@@ -57,6 +178,8 @@
     <body>
           <button class="button" style="vertical-align:right"
           onclick="javascript:document.location='contactrep.html'"><span>CONTACT REP</span></button>
+          <br>
+          <br>
       </body>
     </html>
     <style>
@@ -78,6 +201,8 @@
         width: 75%;
     }
 </style>
+    <br>
+    <br>
     <br>
     <br>
 
