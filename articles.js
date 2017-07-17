@@ -1,13 +1,9 @@
+$(function(){
+        $.get('https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=8420d7a4983e43c7bcf0430d63413c0b&articles[4].title="america"',function(data){
+                console.log(data)
+                var articles = data.articles;
+                var title = articles[0].title
+                document.getElementById("article").innerHTML = title;
 
-var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-url += '?' + $.param({
-  'api-key': '6223db961aea4ab0a89b768fb86103e3'
-});
-$.ajax({
-  url: url,
-  method: 'GET',
-}).done(function(result) {
-  console.log(result);
-}).fail(function(err) {
-  throw err;
-});
+               })
+    })
