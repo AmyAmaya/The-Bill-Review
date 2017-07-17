@@ -23,7 +23,10 @@ $(function(){
              document.getElementById("number").innerHTML = number;
              document.getElementById("action").innerHTML = action;
              document.getElementById("actiondate").innerHTML = actiondate;
-             document.getElementById("govtrack_url").innerHTML = url;
+
+             $("#govtrack_url").click(function(){
+               window.open(url, '_blank')
+             })
        })
      }
      if(numbers){
@@ -46,7 +49,10 @@ $(function(){
                 document.getElementById("number").innerHTML = number;
                 document.getElementById("action").innerHTML = action;
                 document.getElementById("actiondate").innerHTML = actiondate;
-                document.getElementById("govtrack_url").innerHTML = url;
+
+                $("#govtrack_url").click(function(){
+                  window.open(url, '_blank')
+                })
           })
         }
     })
