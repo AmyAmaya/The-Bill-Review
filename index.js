@@ -5,7 +5,7 @@ var mykeys= configs.MY_KEY;
 
 $(function(){
   $.ajax({
-           url: "https://api.propublica.org/congress/v1/115/house/bills/introduced.json",
+           url: "https://api.propublica.org/congress/v1/115/house/bills/updated.json",
            type: "GET",
            dataType: 'json',
            headers: {'X-API-Key':mykeys }
