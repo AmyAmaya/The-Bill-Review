@@ -2,7 +2,6 @@ var mykeys= configs.MY_KEY;
 
 
 
-
 $(function(){
   $.ajax({
            url: "https://api.propublica.org/congress/v1/115/house/bills/updated.json",
@@ -17,7 +16,7 @@ $(function(){
              //var summary = bills[i].summary
              var url = bills[i].bill_uri
              var number=bills[i].number
-             document.getElementById("recentbills").innerHTML += "<div><li>Name of Bill: <a href='billpage.html?" + number+"' data-id="+number+" >"+ name +  "</li></div>"
+             document.getElementById("recentbills").innerHTML += "<div><li><br><hr><b>Name of Bill:</b> <a href='billpage.html?" + number+"' data-id="+number+" >"+ name +  "</hr></br></li></div>"
            }
           })
       })
