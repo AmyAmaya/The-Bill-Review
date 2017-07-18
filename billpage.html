@@ -286,6 +286,51 @@ margin-left: 50px;
           document.getElementById("mySidenav").style.width = "0";
       }
       </script>
+      <body>
+    <style>
+    .button{
+    float:center;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #b8b894;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    }
+
+    .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: center;
+    transition: 0.5s;
+    }
+
+    .button span:after {
+    content: '\00bb';
+    position: center;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    }
+
+    .button:hover span {
+    padding-right: 25px;
+    }
+
+    .button:hover span:after {
+    opacity: 1;
+    right: 0;
+    }
+    </style>
+<button class= "button" style= "float:center"
+ id= "govtrack_url"><span>read full text </span></button>
 <section class="main">
 <style>
 input[type=text] {
@@ -435,50 +480,5 @@ font-size: 28px;
           width: 75%;
       }
       </style>
-      <body>
-    <style>
-    .button{
-    float:center;
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #b8b894;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 25px;
-    padding: 10px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    }
-
-    .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: center;
-    transition: 0.5s;
-    }
-
-    .button span:after {
-    content: '\00bb';
-    position: center;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-    }
-
-    .button:hover span {
-    padding-right: 25px;
-    }
-
-    .button:hover span:after {
-    opacity: 1;
-    right: 0;
-    }
-    </style>
-<button class= "button" style= "float:center"
- id= "govtrack_url"><span>read full text </span></button>
 </body>
 </html>
