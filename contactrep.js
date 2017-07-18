@@ -15,13 +15,15 @@ $(function(){
             var city = data.officials[4].address[0].city
             var line= data.officials[4].address[0].line1
             var state = data.officials[4].address[0].state
-            var zip = data.officials[4].address[0].zip
-            var email= data.officials[4].emails[0]
+            //var zip = data.officials[4].address[0].zip
+          //  var email= data.officials[4].emails[0]
             var party= data.officials[4].party
-            var phone = data.officials[4].phones[0]
+          //  var phone = data.officials[4].phones[0]
             var url= data.officials[4].urls
-            document.getElementById("contactinfo").innerHTML += "<div> <li> " + city+ "</li.><li>" + line +"</li><li>" + state +"</li><li>"
-            + zip + "</li><li>" + name +"</li><li>" + party +"</li><li>" +phone+ "</li><li>" +email+ "</li><li>"+ url+ "</li></div>"
+              document.getElementById("contactinfo").innerHTML += "<div><center><li> Name: " +name+ "</li><li> Address: "+ line + ", "+ city+ " " + state +"</li><li>"
+               + name +"</li><li> Party: " + party +"</li><li> Website: "  + url+ "</li></center></div>"
+
+
 
 
            });
