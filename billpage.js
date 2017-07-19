@@ -62,7 +62,7 @@ $(function(){
                   for(var i = 0; i < 10; i++){
                     var name = articles[i].webTitle
                     var url = articles[i].webUrl
-                    document.getElementById("article").innerHTML += "<div><ul><br>Article Name:" +"<a href = " +url+ ">" + name + "</a></hr></br></ul></div>"
+                    document.getElementById("article").innerHTML += "<div><ul><br><hr>Article Name:" +"<a href = " +url+ ">" + name + "</a></hr></br></ul></div>"
                   }
                  })
 
