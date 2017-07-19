@@ -16,12 +16,19 @@ $(function(){
             var line= data.officials[4].address[0].line1
             var state = data.officials[4].address[0].state
             //var zip = data.officials[4].address[0].zip
-          //  var email= data.officials[4].emails[0]
+            var email= data.officials[4].emails[0]
             var party= data.officials[4].party
           //  var phone = data.officials[4].phones[0]
             var url= data.officials[4].urls
+            if (data.officials[4].emails[0]){
+              document.getElementById("contactinfo").innerHTML += "<div><center><li> Name: " +name+ "</li><li> Address: "+ line + ", "+ city+ " " + state +"</li><li>"
+               +email+"</li><li"+ name +"</li><li> Party: " + party +"</li><li> Website: "  + url+ "</li></center></div>"
+
+            }
+            else {
               document.getElementById("contactinfo").innerHTML += "<div><center><li> Name: " +name+ "</li><li> Address: "+ line + ", "+ city+ " " + state +"</li><li>"
                + name +"</li><li> Party: " + party +"</li><li> Website: "  + url+ "</li></center></div>"
+            }
 
 
 
