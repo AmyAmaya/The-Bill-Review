@@ -101,75 +101,144 @@ body, html {
         <a href="ourmission.html">Our Mission</a>
         <a href="contactrep.html">Contact Your Representative</a>
       </div>      </div>
-
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
-
-      <script>
-      function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
+      <!DOCTYPE html>
+      <html>
+      <title>The Bill Review</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Century Gothic", sans-serif;}
+      body, html {
+          height: 100%;
+          color: #000000;
+          line-height: 1.8;
       }
-      function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
+      /* Create a Parallax Effect */
+      .bgimg-1, .bgimg-2, .bgimg-3 {
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
       }
-      </script>
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT</h3>
-<p><center><img src="http://marketingland.com/wp-content/ml-loads/2016/02/GirlsWhoCode_Intelligence_Tool_Screenshot-800x195.png"></center></p>
-<p><center><img src="https://3zjc852t4swp1lmezl171oga-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/alunae.png"></center></p>
-Tech fields are among the fastest growing in the country, yet girls are being left behind.
-While interest in computer science ebbs over time, the age where girls lose interest is roughly between 13-17.
-By 2020, there will be 1.4 million jobs available in tech fields. American graduates will fill 29% of those jobs
- and only 3% of the graduates will be women. These staggering ratios of men to women are also shown in the graphs above.
+      /* First image (Logo. Full height) */
+      .bgimg-1 {
+          background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/United_States_Capitol_-_west_front.jpg');
+          min-height: 100%;
+      .w3-wide {letter-spacing: 10px;}
+      .w3-hover-opacity {cursor: pointer;}
+      /* Turn off parallax scrolling for tablets and phones */
+      @media only screen and (max-device-width: 1024px) {
+          .bgimg-1, .bgimg-2, .bgimg-3 {
+              background-attachment: scroll;
+          }
+      }
+      </style>
 
-<p>We founded <i>The Bill Review</i> as a team at a summer immersion program at
-  <a href="file:///C:/Users/gldnm/Downloads/The%20Bill%20Review%20Files/Girls%20Who%20Code%20--%20Join%2040,000%20Girls%20Who%20Code%20today!.html">
-<i>Girls Who Code,</i></a> a nonprofit whose mission is to close the gender gap in technology.</p>
-<p>With the power of bravery, resilience and sisterhood, we came up with <i>The Bill Review</i>,
-  an online platform whose mission is to inform young Americans about the latest bills being passed in America.
-   In doing so, we seek to encourage young Americans across various backgrounds
-   to be aware of what decisions will impact their lives at the hands of the legislative
-    branch and teach them that their voices matter.</p><br>
+            </style>
+      </div>
+      <style>
+            body {
+                font-family: "Century Gothic", sans-serif;
+            }
 
-    <h1>Our Founders</h1><hr>
-  <h3>Amy Amaya</h3>
-  <h4>Hi! I'm Amy and I'm 16 years old. I love going to church and serve the Lord.<br>
-    I like to study through my bible. I like to draw and analyze pretty much everything.</h4>
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #FFFFFF;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
 
-  <h3>Claire Howard</h3>
-  <h4>Hello, I'm Claire Howard, and I'm so grateful for this opportunity to work on this project.<br>
-     I love books, music, TED talks, taking long walks, and getting to know lovely people.</h4>
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #0020C2;
+                display: block;
+                transition: 0.3s;
+            }
 
-  <h3>Simran Minhas</h3>
-  <h4>Hi! I'm Simran Minhas and I'm 17 years old.<br>
-     I created this website along with my friends at Girls Who Code
-     to try to raise awareness in my community.<br>
-     In addition to coding, I love reading, watching TV, and swimming.
-</h4>
+            .sidenav a:hover, .offcanvas a:focus{
+                color: #2554C7;
+            }
 
-  <h3>Stephanie Younger</h3>
-  <div align= "left">
-</div>
-  <h4>Hey there, I'm Stephanie, and I am 15 years old.
-  I am extremely grateful to have had the opportunity to build a website with Amy, Claire and Simran.<br>
-  I love helping my community through writing, poetry, social change and teamwork.
-  <br>I also enjoy coding and aspire to be a software engineer.<h4>
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
 
-</p>
-  </div>
-<!-- Footer -->
-<footer class="w3-center w3-red w3-padding-15">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-  </div>
-</footer>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
+            @media screen and (max-height: 450px) {
+              .sidenav {padding-top: 15px;}
+              .sidenav a {font-size: 18px;}
+            }
+            </style>
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="index.html">Home</a>
+              <a href="ourmission.html">Our Mission</a>
+              <a href="contactrep.html">Contact Your Representative</a>
+            </div>      </div>
 
-</body>
-</html>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+            <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            </script>
+      <!-- Container (About Section) -->
+      <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">ABOUT</h3>
+      <p><center><img src="http://marketingland.com/wp-content/ml-loads/2016/02/GirlsWhoCode_Intelligence_Tool_Screenshot-800x195.png"></center></p>
+      <p><center><img src="https://3zjc852t4swp1lmezl171oga-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/alunae.png"></center></p>
+      Tech fields are among the fastest growing in the country, yet girls are being left behind.
+      While interest in computer science ebbs over time, the age where girls lose interest is roughly between 13-17.
+      By 2020, there will be 1.4 million jobs available in tech fields. American graduates are will fill 29% of those jobs and only 3% of the graduates will be women.
+      <p>We founded <i>The Bill Review</i> as a team at a summer immersion program at
+        <a href="index.html">
+      <i>Girls Who Code,</i></a> a nonprofit whose mission is to close the gender gap in technology.</p>
+      <p>With the power of bravery, resilience and sisterhood, we came up with <i>The Bill Review</i>,
+        an online platform whose mission is to inform young Americans about the latest bills being passed in America.
+         In doing so, we seek to encourage young Americans across various backgrounds
+         to be aware of what decisions will impact their lives at the hands of the legislative
+          branch and teach them that their voices matter.</p><br>
+
+          <h1>Our Founders</h1><hr>
+      <center><img src="https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/20228834_499427290400983_5299611295019891722_n.jpg?oh=39d8ab2a34521e2a48df92b063e2b73b&oe=5A03E062" alt="Smiley face" width="500" height="500"></center>
+
+      <h3>Amy Amaya (far right)</h3>
+        <h4>Hi! I'm Amy and I'm 16 years old. I love going to church and serve the Lord.<br>
+          I like to study through my bible. I like to draw and analyze pretty much everything.</h4>
+
+        <h3>Claire Howard(center,left)</h3>
+        <h4>Hello, I'm Claire Howard, and I'm so grateful for this opportunity to work on this project.<br>
+           I love books, music, TED talks, taking long walks, and getting to know lovely people.</h4>
+
+        <h3>Simran Minhas(far left)</h3>
+        <h4>Hi! I'm Simran Minhas and I'm 17 years old.<br>
+           I created this website along with my friends at Girls Who Code
+           to try to raise awareness in my community.<br>
+           In addition to coding, I love reading, watching TV, and swimming.
+      </h4>
+
+        <h3>Stephanie Younger(center,right)</h3>
+        <h4>Hey there, I'm Stephanie, and I am 15 years old.
+        I am extremely grateful to have had the opportunity to build a website with Amy, Claire and Simran.<br>
+        I love helping my community through writing, poetry, social change and teamwork.
+        <br>I also enjoy coding and aspire to be a software engineer.<h4>
