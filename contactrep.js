@@ -20,6 +20,9 @@ $(function(){
             var party= data.officials[4].party
           //  var phone = data.officials[4].phones[0]
             var url= data.officials[4].urls
+
+              document.getElementById("contactinfo").innerHTML += "<div><center><ul> Name: " +name+ "</ul><ul> Address: "+ line + ", "+ city+ " " + state +"</ul><ul> Party: " + party +"</ul><ul> Website: "  + url+ "</ul></center></div>"
+
             if (data.officials[4].emails[0]){
               document.getElementById("contactinfo").innerHTML += "<div><center><li> Name: " +name+ "</li><li> Address: "+ line + ", "+ city+ " " + state +"</li><li>"
                +email+"</li><li"+ name +"</li><li> Party: " + party +"</li><li> Website: "  + url+ "</li></center></div>"
