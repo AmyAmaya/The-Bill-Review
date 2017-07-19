@@ -21,13 +21,14 @@ $(function(){
           //  var phone = data.officials[4].phones[0]
             var url= data.officials[4].urls
             if ( data.officials[4].phones && data.officials[4].photoUrl && data.officials[4].emails){
-              var email= data.officials[4].emails[0]
-              var phone = data.officials[4].phones[0]
               var profilePhoto = data.officials[4].photoUrl
-              document.getElementById("contactinfo").innerHTML += "<div><center><li> Name: " +name+ "</li><li> Address: "+ line + ", "+ city+ " " + state +"</li><li>"
-              +email+"</li><li>" +phone+"</li><li>"+ name +"</li><li> Party: " + party +"</li><li> Website: "  + url+ "</li></center></div>";
               $("#photo").html
               document.getElementById("photo").innerHTML="<img src='"+profilePhoto+"'>"
+              var email= data.officials[4].emails[0]
+              var phone = data.officials[4].phones[0]
+              document.getElementById("contactinfo").innerHTML += "<div><center><li> Name: " +name+ "</li><li> Address: "+ line + ", "+ city+ " " + state +"</li><li>"
+              +email+"</li><li>" +phone+"</li><li>"+ name +"</li><li> Party: " + party +"</li><li> Website: "  + url+ "</li></center></div>";
+
 
             }
             else {
